@@ -15,32 +15,36 @@ export function TaskList({ title, description, date, nameCreator, state }: Task)
     const [isLiked, setIsLiked] = useState<boolean>(false)
 
     const handleLikeClick = () => {
-        if(!isLiked) {
+        if (!isLiked) {
             setLikes(likes + 1)
             setIsLiked(true)
         }
     }
-    
-    
+
+
     return (
         <>
             <div className="container">
                 <div className="card">
-                    <h2 className="title">{title}</h2>
-                    <div>
+                    <header>
+                        <h2 className="title">{title}</h2>
+                    </header>
+                    <section>
                         <span className="description">{description}.</span>
-                    </div>
-                    <div>
+                    </section>
+                    <section>
                         <span className="date">Fecha de Creación: {date}</span>
-                    </div>
-                    <div>
+                    </section>
+                    <section>
                         <span className="state">Estado: {state}</span>
-                    </div>
-                    <div className="buttons">
+                    </section>
+                    <section className="buttons">
                         <button className="like-button" onClick={handleLikeClick} disabled={isLiked} >Like {likes}</button>
                         <button className="delete-button">Eliminar</button>
-                    </div>
-                    <span className="creator">Creado por: {nameCreator}</span>
+                    </section>
+                    <section>
+                        <span className="creator">Creado por: {nameCreator}</span>
+                    </section>
                 </div>
             </div>
         </>
