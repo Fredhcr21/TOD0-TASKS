@@ -1,27 +1,28 @@
-# React + TypeScript + Vite
+# Prueba Tecnica Desarrollador FullStack React - Laravel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+   **Tu Misión:**
+#### Desarrollar un prototipo de esta plataforma.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ - Frontend (React):
+- [x]  Interfaz Inicial: Al ingresar a la aplicación, el usuario deberá ver una lista de tareas con
+      los siguientes datos: título, descripción, fecha de creación, estado de la república,
+      nombre del creador y número de "likes". Además, se deberá mostrar un botón para
+      crear una nueva tarea y otro botón para otorgar "like" a cada tarea presente en la lista.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [x]  Funcionalidad de "Likes": Cada tarea contará con un botón de "Like". Al presionar este
+      botón, la cantidad de "likes" de dicha tarea debe incrementarse y el botón se debe
+      deshabilitar para esa tarea específica en la vista actual (Si recargo la pagina el botón
+      debe estar habilitado de nuevo).
 
-- Configure the top-level `parserOptions` property like this:
+- []  Creación de Tareas: Debe existir un formulario que permita ingresar los siguientes
+      datos: título, descripción, fecha, estado de la república y el nombre del creador.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- []  Edición de Tareas: Las tareas no deben ser editables (solo el contador de likes).
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- []  Eliminación de Tareas: Se deben poder eliminar tareas, pero sólo si no tienen "likes"
+      asociados.
+
+- []  Filtrado y Búsqueda: Los usuarios deben tener la capacidad de buscar tareas por título o
+      estado.
