@@ -19,10 +19,9 @@
 - [x]  Creación de Tareas: Debe existir un formulario que permita ingresar los siguientes
       datos: título, descripción, fecha, estado de la república y el nombre del creador.
 
-- []  Edición de Tareas: Las tareas no deben ser editables (solo el contador de likes).
+- [x]  Edición de Tareas: Las tareas no deben ser editables (solo el contador de likes).
 
 - []  Eliminación de Tareas: Se deben poder eliminar tareas, pero sólo si no tienen "likes"
       asociados.
 
-- []  Filtrado y Búsqueda: Los usuarios deben tener la capacidad de buscar tareas por título o
-      estado.
+- []  Filtrado y Búsqueda: Los usuarios deben tener la capacidad de buscar tareas por título o estado.

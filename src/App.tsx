@@ -11,19 +11,19 @@ function App() {
   }
   return (
     <>
-    <div className='container'>
-    <div>
-      <CreateTask onGuardarTarea={handleSaveTask} />
-    </div>
-      <main>
-        {
-          tasks.map((task, index) => (
-            <TaskList key={index} title={task.title} description={task.description} date={task.date} nameCreator={task.nameCreator} state={task.state} />
-          ))
-        }
-        <TaskList title='Funciones Matematicas' description='Tendra que realizar tres funciones graficas' date='28/Septiembre/2023' nameCreator='Jhon Washington' state='Quintana Roo' />
-      </main>
-    </div>
+      <div className='container'>
+        <div>
+          <CreateTask onGuardarTarea={handleSaveTask} />
+        </div>
+        <main>
+          {
+            tasks.map((task, index) => (
+              <TaskList key={index} title={task.title} description={task.description} date={task.date} nameCreator={task.nameCreator} state={task.state} />
+            ))
+          }
+          <TaskList title='Funciones Matematicas' description='Tendra que realizar tres funciones graficas' date='28/Septiembre/2023' nameCreator='Jhon Washington' state='Quintana Roo' />
+        </main>
+      </div>
     </>
   )
 }

@@ -20,6 +20,12 @@ export function TaskList({ title, description, date, nameCreator, state }: Task)
             setIsLiked(true)
         }
     }
+    const handleDisLikeClick = () => {
+        if (likes > 0) {
+            setLikes(likes - 1)
+            setIsLiked(false)
+        }
+    }
 
 
     return (
@@ -39,7 +45,8 @@ export function TaskList({ title, description, date, nameCreator, state }: Task)
                         <span className="state">Estado: {state}</span>
                     </section>
                     <section className="buttons">
-                        <button className="like-button" onClick={handleLikeClick} disabled={isLiked} >Like {likes}</button>
+                        <button className="like-button" onClick={handleLikeClick} disabled={isLiked}>Like ({likes})</button>
+                        <button className="dislike-button" onClick={handleDisLikeClick}>disLike</button>
                         <button className="delete-button">Eliminar</button>
                     </section>
                     <section>
