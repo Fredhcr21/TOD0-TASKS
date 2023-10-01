@@ -16,7 +16,7 @@
       deshabilitar para esa tarea específica en la vista actual (Si recargo la pagina el botón
       debe estar habilitado de nuevo).
 
-- []  Creación de Tareas: Debe existir un formulario que permita ingresar los siguientes
+- [x]  Creación de Tareas: Debe existir un formulario que permita ingresar los siguientes
       datos: título, descripción, fecha, estado de la república y el nombre del creador.
 
 - []  Edición de Tareas: Las tareas no deben ser editables (solo el contador de likes).

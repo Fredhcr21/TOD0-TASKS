@@ -1,16 +1,29 @@
 import './App.css'
-import { TaskList } from './controllers/TaskList'
+import { Task, TaskList } from './controllers/taskList/TaskList'
+import { CreateTask } from './controllers/createTask/createTask'
+import { useState } from 'react'
 
 function App() {
+  const [tasks, setTasks] = useState<Task[]>([])
 
+  const handleSaveTask = (task: Task) => {
+    setTasks([...tasks, task])
+  }
   return (
     <>
-      <input type="text" placeholder="Nombre de la tarea" />
-      <button>Crear</button>
+    <div className='container'>
+    <div>
+      <CreateTask onGuardarTarea={handleSaveTask} />
+    </div>
       <main>
-        <TaskList title='Funciones Matematicas' description='Tendra que realizar tres funciones graficas' date='28/Septiembre/2023' nameCreator='Jhon Washington' state='Quintana Roo' />
+        {
+          tasks.map((task, index) => (
+            <TaskList key={index} title={task.title} description={task.description} date={task.date} nameCreator={task.nameCreator} state={task.state} />
+          ))
+        }
         <TaskList title='Funciones Matematicas' description='Tendra que realizar tres funciones graficas' date='28/Septiembre/2023' nameCreator='Jhon Washington' state='Quintana Roo' />
       </main>
+    </div>
     </>
   )
 }

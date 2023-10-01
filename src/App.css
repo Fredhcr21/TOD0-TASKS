@@ -4,3 +4,31 @@
   padding: 2rem;
   text-align: center;
 }
+
+/* Estilos para el contenedor principal */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Alinea los elementos en la parte superior */
+}
+
+/* Estilos para el panel izquierdo (formulario) */
+.left-panel {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 10px; /* Separación entre los paneles */
+}
+
+/* Estilos para el panel derecho (tareas creadas) */
+.right-panel {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

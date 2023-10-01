@@ -2,7 +2,7 @@ import { useState } from "react"
 import './TaskList.css'
 
 
-interface Task {
+export interface Task {
     title: string;
     description: string;
     date: string;
