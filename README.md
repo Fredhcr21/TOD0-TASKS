@@ -21,7 +21,7 @@
 
 - [x]  Edición de Tareas: Las tareas no deben ser editables (solo el contador de likes).
 
-- []  Eliminación de Tareas: Se deben poder eliminar tareas, pero sólo si no tienen "likes"
+- [x]  Eliminación de Tareas: Se deben poder eliminar tareas, pero sólo si no tienen "likes"
       asociados.
 
 - []  Filtrado y Búsqueda: Los usuarios deben tener la capacidad de buscar tareas por título o estado.
