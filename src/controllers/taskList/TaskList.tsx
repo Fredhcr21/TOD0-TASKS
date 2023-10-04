@@ -4,13 +4,13 @@ import './TaskList.css'
 
 
 export interface Task {
-    id?: string
+    id?: number
     title: string;
     description: string;
     date: string;
     nameCreator: string;
     state: string
-    handleDelete: (id: string) => void
+    handleDelete: (id: number) => void
     likes?: number
 }
 
