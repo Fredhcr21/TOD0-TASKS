@@ -10,7 +10,7 @@ function App() {
   const [nextId, setNextId] = useState<number>(1)
 
   const handleSaveTask = (task: Task) => {
-    const newTask = {...task, id: nextId}
+    const newTask = { ...task, id: nextId }
     setNextId(nextId + 1)
     setTasks([...tasks, newTask])
   }
@@ -30,21 +30,23 @@ function App() {
   return (
     <>
       <div className='container'>
-        <div className='divFilter'>
-        <input className='filterInputs' type="text" placeholder='Filtrar por titulo' value={filteredTitle} onChange={(e) => setFilteredTitle(e.target.value)} />
-        <input className='filterInputs' type="text" placeholder='Filtrar por estado' value={filteredState} onChange={(e) => setFilteredState(e.target.value)} />
-        <button className='buttonFilter' onClick={filterTask}>Buscar</button>
-        </div>
-        <div>
+        <section className='divFilter'>
+          <input className='filterInputs' type="text" placeholder='Filtrar por titulo' value={filteredTitle} onChange={(e) => setFilteredTitle(e.target.value)} />
+          <input className='filterInputs' type="text" placeholder='Filtrar por estado' value={filteredState} onChange={(e) => setFilteredState(e.target.value)} />
+          <button className='buttonFilter' onClick={filterTask}>Buscar</button>
+        </section>
+
+        <section>
           <CreateTask onGuardarTarea={handleSaveTask} />
-        </div>
-        <main>
+        </section>
+
+        <section className='task-container'>
           {
             filterTask().map((task) => (
               <TaskList id={task.id} handleDelete={handleDelete} key={task.id} title={task.title} description={task.description} date={task.date} nameCreator={task.nameCreator} state={task.state} />
             ))
           }
-        </main>
+        </section>
       </div>
     </>
   )
