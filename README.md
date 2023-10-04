@@ -24,4 +24,18 @@
 - [x]  Eliminación de Tareas: Se deben poder eliminar tareas, pero sólo si no tienen "likes"
       asociados.
 
-- []  Filtrado y Búsqueda: Los usuarios deben tener la capacidad de buscar tareas por título o estado.
+- [x]  Filtrado y Búsqueda: Los usuarios deben tener la capacidad de buscar tareas por título o estado.
+
+
+
+### How to use the Task List Application.
+
+#### First: 
+      `$ npm install`
+
+
+#### Afther to install the dependencies, Run the server with: 
+      `$ npm run dev`
+
+#### Afther that enjoy the app ╰(*°▽°*)╯.
+
