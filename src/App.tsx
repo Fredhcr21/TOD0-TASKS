@@ -5,12 +5,15 @@ import { useState } from 'react'
 
 function App() {
   const [tasks, setTasks] = useState<Task[]>([])
+  const [nextId, setNextId] = useState<number>(1)
 
   const handleSaveTask = (task: Task) => {
-    setTasks([...tasks, task])
+    const newTask = {...task, id: nextId}
+    setNextId(nextId + 1)
+    setTasks([...tasks, newTask])
   }
 
-  const handleDelete = (id: string) => {
+  const handleDelete = (id: number) => {
     const deleteTask = tasks.filter((task) => task.id !== id)
     setTasks(deleteTask)
   }
