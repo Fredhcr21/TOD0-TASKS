@@ -31,11 +31,11 @@
 ### How to use the Task List Application.
 
 #### First: 
-      `$ npm install`
+      $ npm install
 
 
 #### Afther to install the dependencies, Run the server with: 
-      `$ npm run dev`
+      $ npm run dev
 
 #### Afther that enjoy the app ╰(*°▽°*)╯.
 
