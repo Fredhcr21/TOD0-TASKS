@@ -30,9 +30,11 @@ function App() {
   return (
     <>
       <div className='container'>
-        <input type="text" placeholder='Filtrar por titulo' value={filteredTitle} onChange={(e) => setFilteredTitle(e.target.value)} />
-        <input type="text" placeholder='Filtrar por estado' value={filteredState} onChange={(e) => setFilteredState(e.target.value)} />
-        <button onClick={filterTask}>Buscar</button>
+        <div className='divFilter'>
+        <input className='filterInputs' type="text" placeholder='Filtrar por titulo' value={filteredTitle} onChange={(e) => setFilteredTitle(e.target.value)} />
+        <input className='filterInputs' type="text" placeholder='Filtrar por estado' value={filteredState} onChange={(e) => setFilteredState(e.target.value)} />
+        <button className='buttonFilter' onClick={filterTask}>Buscar</button>
+        </div>
         <div>
           <CreateTask onGuardarTarea={handleSaveTask} />
         </div>
