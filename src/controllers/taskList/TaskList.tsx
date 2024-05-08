@@ -10,7 +10,7 @@ export interface Task {
     date: string;
     nameCreator: string;
     state: string
-    handleDelete: (id: number) => void
+    handleDelete?: (id: number) => void
     likes?: number
 }
 
@@ -50,7 +50,7 @@ export function TaskList({ title, description, date, nameCreator, state, handleD
                     <section className="buttons">
                         <button className="like-button" onClick={handleLikeClick} disabled={isLiked}>Like ({likes})</button>
                         <button className="dislike-button" onClick={handleDisLikeClick}>disLike</button>
-                        <button className="delete-button" onClick={() => handleDelete(id!)} disabled={likes > 0}>Eliminar</button>
+                        <button className="delete-button" onClick={() => handleDelete!(id!)} disabled={likes > 0}>Eliminar</button>
                     </section>
                     <section>
                         <span className="creator">Creado por: {nameCreator}</span>
