@@ -16,6 +16,10 @@
   margin-bottom: 10px;
 }
 
+h2 {
+  color: #000;
+}
+
 /* Estilos para la descripción */
 .description {
   font-size: 1em;
